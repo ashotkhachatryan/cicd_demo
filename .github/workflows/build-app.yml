@@ -4,10 +4,16 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      opensilver-version:
+        description: 'OpenSilver version to use'
+        default: '1.2.1'
+        required: true
       
 jobs:
   BuildApp:
     runs-on: windows-latest
     steps:
       - name: Just print
-        run: echo "Message from CI CD"
+        run: echo "Message from CI CD " ${{ github.event.inputs.opensilver-version }}
