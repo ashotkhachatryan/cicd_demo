@@ -1,0 +1,13 @@
+name: Application Build
+
+on:
+  push:
+    branches:
+      -main
+      
+jobs:
+  BuildApp:
+    runs-on: windows-latest
+    steps:
+      - name: Just print
+        run: echo "Message from CI CD"
