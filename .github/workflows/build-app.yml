@@ -3,7 +3,7 @@ name: Application Build
 on:
   push:
     branches:
-      -main
+      - main
       
 jobs:
   BuildApp:
